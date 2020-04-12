@@ -6,7 +6,9 @@ function App() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:9000/api/cars`)
+    // localhost:5000 -> proxy
+    // localhost:9000 -> backend
+    fetch(`http://localhost:5000/api/cars`)
       .then(data => data.json())
       .then(data => setCars(data));
   }, []);
